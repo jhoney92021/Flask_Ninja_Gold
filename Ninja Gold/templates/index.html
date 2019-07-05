@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Ninja Gold!!!!!!</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+      <meta charset="UTF-8">
+   </head>
+
+   <body>
+    <div class="container">
+         <div class="header">
+               <h3>Ninja Gold</h3>
+               <button>←</button>
+               <button>→</button>
+               <button>x</button>
+               <button>ƒ</button>
+               <input type="text" placeholder="httlp://localhost:5000/play">
+               <input type="text" placeholder="♀">
+           </div><!--header-->
+           <div class="chassis">
+              <h2>Welcome!!!</h2>
+              <h5>Win if you get 500 gold</h5>
+              <h5>Loose if you exceed 15 turns</h5>
+              <h3>Your Gold:   <span>{{gold}}</span></h3>
+              <h3>Turn Number:   <span>{{transactions}}</span></h3>
+              <br>
+              <br>
+                             
+                  <form action="/process" method="POST"  class="boxes" style="background-color:{{color}};">
+                    <h4>Farm</h4>
+                     
+                     <h4>Earns 10-12 gold</h4>
+
+                     <input type="hidden" name="workplace" value="Farm">
+                     <input type="submit" name="findGold" value="Find Gold!" class="findGold">
+                  </form><!--farm-->
+                  <form action="/process" method="POST"  class="boxes" style="background-color:{{color}};">
+                    <h4>Cave</h4>
+                     
+                     <h4>Earns 5-10 gold</h4>
+
+                     <input type="hidden" name="workplace" value="Cave">
+                     <input type="submit" name="findGold" value="Find Gold!" class="findGold">
+                  </form><!--cave-->
+                  <form action="/process" method="POST" class="boxes" style="background-color:{{color}};">
+                    <h4>House</h4>
+                     
+                     <h4>Earns 2-5 gold</h4>
+
+                     <input type="hidden" name="workplace" value="House">
+                     <input type="submit" name="findGold" value="Find Gold!" class="findGold">
+                  </form><!--house-->
+                  <form action="/process" method="POST"  class="boxes" style="background-color:{{color}};">
+                    <h4>Casino</h4>
+                     
+                     <h4>Earns/Takes 0-50 gold</h4>
+
+                     <input type="hidden" name="workplace" value="Casino">
+                     <input type="submit" name="findGold" value="Find Gold!" class="findGold">
+                   </form><!--casino-->
+               
+               
+               <br>
+               <br>
+               <h5>Activities:</h5>
+               <form action="/process" method="POST" class="activities">
+                  <ol>                 
+                  {%for i in range(0, transactions) %}
+                        <li style="color: {{text_color[i]}};">{{activities[i]}}</li> 
+                  {% endfor %}
+                  </ol>    
+               </form>
+
+               <form action="/process" method="POST">
+                  <input type='{{reset}}' name="workplace" value="Reset" class="findGold">
+               </form>
+
+               
+                 
+               
+   
+           </div><!--chassis-->
+           <h4 id="bottomBar" >//</h4>     
+    </div><!--container-->
+
+   </body>
+</html>

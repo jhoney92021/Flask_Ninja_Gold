@@ -1,0 +1,86 @@
+*{
+    border:0;
+    margin:0;
+    padding:0;    
+}
+
+.container{
+    /* outline: 2px solid black; */
+    height: auto; width: 800px;
+}
+
+    .header{
+        /* outline: 4px solid blue; */
+        height: 100px;
+        display: block;
+        text-align: center;
+        background-color:grey;
+        line-height: 2;
+    }
+
+        .header button{
+            height: 30px;  width: 30px;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .header input:nth-of-type(1){
+            width: 400px; height: 30px;
+        }
+
+        .header input:nth-of-type(2){
+            width: 100px; height: 30px;
+            margin-left: 20px;
+        }
+
+    .chassis{
+        /* outline: 4px solid red; */
+        height: auto; width: 800px;
+        text-align: left;
+
+    }
+
+    .boxes{
+        outline: 5px solid black;
+        height: 180px; width: 180px;
+        display: inline-block;
+        vertical-align: top;
+        margin-left:5px;
+        margin-right: 5px;
+        text-align: center;
+        line-height: 3;
+        /* box-shadow: 5px 5px black; */
+    }
+
+    #textarea{
+        outline: 4px solid black;
+    }
+
+    .findGold{
+        /* outline: 4px solid green; */
+        box-shadow: 5px 5px black;
+    }
+
+    span{        
+        border: 1px solid black;
+    }
+
+    #bottomBar{
+        height: 30px;
+        display: block;
+        text-align: right;
+        background-color: grey;
+        font-size: 28px;
+    }
+
+    .activities{
+        /* outline: 3px dashed yellow; */
+        height: 100px; width: 700px ;
+        overflow-y: scroll;
+        margin-left: 20px;
+    }
+
+    ol{
+        display: flex;
+        flex-direction: column-reverse;
+    }
